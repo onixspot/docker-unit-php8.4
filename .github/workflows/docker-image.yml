@@ -1,4 +1,4 @@
-name: Build, Push and Deploy with Docker Compose
+name: Build and Push Docker image
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-push-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
