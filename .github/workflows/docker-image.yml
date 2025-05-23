@@ -28,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: docker.io/your-username/your-image-name:latest
+          tags: docker.io/onixspot/unit-php:8.4
