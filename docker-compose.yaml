@@ -2,10 +2,13 @@ services:
   app:
     build:
       context: .
-    image: onixspot/unit-php:8.4
+    image: unit:1.34.2-php8.4
     environment:
       XDEBUG_CONFIG: 'idekey=PHPSTORM client_host=host.docker.internal client_port=9003 mode=debug,develop start_with_request=trigger'
       PHP_IDE_CONFIG: 'serverName=app'
     volumes:
       - ~/.ssh:/root/.ssh
       - .:/app
+    ports:
+      - "8765:8765"
+      - "8080:8080"
